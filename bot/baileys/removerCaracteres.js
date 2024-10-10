@@ -20,7 +20,7 @@ export async function removerCaracteres(c, mensagem) {
         // Apenas se o usuário NÃO for administrador
         if (!isAdmin) {
             // Verifica se a mensagem tem mais de 700 caracteres
-            if (comprimentoTotal > 900) {
+            if (comprimentoTotal > 950) {
                 try {
                     await c.groupParticipantsUpdate(grupoId, [usuarioId], 'remove'); // Remove o usuário
                     await c.sendMessage(grupoId, { text: '✅ Usuário banido por mensagem longa!' }); // Envia mensagem ao grupo
